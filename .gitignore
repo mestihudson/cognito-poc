@@ -1,0 +1,6 @@
+node_modules
+.env.local
+.aws/config
+ACCESS_TOKEN
+ID_TOKEN
+REFRESH_TOKEN

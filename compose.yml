@@ -1,0 +1,16 @@
+version: '3.9'
+
+services:
+  express:
+    image: node:16
+    volumes:
+    - .:/ws
+    - ./.aws/config:/root/.aws/config
+    working_dir: /ws
+    entrypoint: sh -c "yarn install && yarn dev"
+    env_file:
+    - .env.local
+    environment:
+      PORT: 3000
+    ports:
+    - 3000:3000
